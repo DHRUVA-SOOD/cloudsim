@@ -1,21 +1,23 @@
 package org.cloudbus.cloudsim.examples;
-
+import org.jfree.chart.plot.SpiderWebPlot;
+import org.jfree.data.xy.DefaultXYDataset;
+import java.awt.Color;
+import java.awt.Font;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
 import org.cloudbus.cloudsim.*;
-import org.cloudbus.cloudsim.container.core.Container;
 import org.cloudbus.cloudsim.core.CloudSim;
-import org.cloudbus.cloudsim.core.GuestEntity;
-import org.cloudbus.cloudsim.examples.network.datacenter.NetworkConstants;
-import org.cloudbus.cloudsim.network.datacenter.*;
-import org.cloudbus.cloudsim.provisioners.BwProvisionerSimple;
-import org.cloudbus.cloudsim.provisioners.PeProvisionerSimple;
-import org.cloudbus.cloudsim.provisioners.RamProvisionerSimple;
-
-import java.io.IOException;
+import org.cloudbus.cloudsim.core.HostEntity;
+import org.cloudbus.cloudsim.provisioners.*;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.chart.ChartUtils; // For saving charts as images
+import java.io.File;
+import java.io.IOException;
 
 public class DiamondAppMultiExtensionExample {
 
