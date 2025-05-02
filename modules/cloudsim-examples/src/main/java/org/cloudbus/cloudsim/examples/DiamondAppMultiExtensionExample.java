@@ -281,6 +281,20 @@ public class DiamondAppMultiExtensionExample {
 		cla.setGuestId(guestList.get(0).getId());
 		appCloudlet.cList.add(cla);
 
+		NetworkCloudlet cla = new NetworkCloudlet(
+				NetworkConstants.currentCloudletId,
+				0,
+				1,
+				fileSize,
+				outputSize,
+				utilizationModel,
+				utilizationModel,
+				utilizationModel);
+		NetworkConstants.currentCloudletId++;
+		cla.setUserId(broker.getId());
+		cla.setGuestId(guestList.get(0).getId());
+		appCloudlet.cList.add(cla);
+
 		NetworkCloudlet clb = new NetworkCloudlet(
 				NetworkConstants.currentCloudletId,
 				0,
